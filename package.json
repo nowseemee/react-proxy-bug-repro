@@ -1,0 +1,16 @@
+{
+  "name": "react-proxy-bug-repro",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/stencil-react-components",
+    "packages/stencil-starter",
+    "packages/gatsby-app"
+  ],
+  "scripts": {
+    "build": "cd packages/stencil-starter && yarn build && cd ../../packages/stencil-react-components && yarn build && cd ../../packages/gatsby-app && yarn build",
+    "start": "cd packages/gatsby-app && yarn serve"
+  }
+}
